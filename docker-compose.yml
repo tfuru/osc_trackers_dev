@@ -1,0 +1,12 @@
+version: '3'
+services:
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "9000:9000/udp"
+    privileged: true
+    tty: true
+    volumes:
+      - ./app:/app
